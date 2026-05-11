@@ -8,25 +8,38 @@ body {
 header {
   background: #222;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav {
-  margin-top: 10px;
+/* LEFT SIDE (LOGO + TITLE) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* NAV */
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 10px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   position: relative;
   width: 100%;
@@ -50,7 +63,7 @@ nav a:hover {
   background: black;
 }
 
-/* smooth scroll animation */
+/* ANIMATION */
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
