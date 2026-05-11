@@ -1,72 +1,83 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      background: #000;
+      animation: fade 1s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    .welcome-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Website</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- Slideshow Section -->
 <div class="hero">
 
   <img class="slides" src="1.jpeg">
   <img class="slides" src="2.jpeg">
   <img class="slides" src="3.jpeg">
   <img class="slides" src="4.jpeg">
-  <img class="slides" src="5.jpeg">
-  <img class="slides" src="6.jpeg">
-  <img class="slides" src="7.jpeg">
-  <img class="slides" src="8.jpeg">
-  <img class="slides" src="9.jpeg">
-  <img class="slides" src="10.jpeg">
-  <img class="slides" src="11.jpeg">
-  <img class="slides" src="12.jpeg">
-  <img class="slides" src="13.jpeg">
-  <img class="slides" src="14.jpeg">
-
-  <div class="hero-text">
-    <h2>Welcome</h2>
-    <p>Experience our events, gallery, and community.</p>
-  </div>
-</div>
-
-<div class="container">
-
-  <div class="welcome-card">
-    <h2>Hello 👋</h2>
-
-    <p>
-      Welcome to our website. This homepage now includes an automatic
-      slideshow using your local images from <strong>1.jpeg</strong>
-      through <strong>14.jpeg</strong>.
-    </p>
-
-    <p>
-      Upload all JPEG files into the same GitHub Pages folder as your
-      HTML files.
-    </p>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 My Website
-</footer>
-
-<script>
-  let slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-
-    setTimeout(showSlides, 3000);
-  }
-</script>
-
-</body>
 </html>
