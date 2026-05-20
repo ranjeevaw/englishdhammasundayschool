@@ -22,8 +22,8 @@ body {
 header {
   background-color: #8B0000;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
 .logo-container {
@@ -69,7 +69,7 @@ nav a:hover {
 
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 40px auto;
   background-color: white;
   padding: 30px;
@@ -80,6 +80,42 @@ nav a:hover {
   margin-bottom: 20px;
   text-align: center;
   color: #8B0000;
+}
+
+/* ========================= */
+/* MARQUEE GALLERY */
+/* ========================= */
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.marquee-content img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ========================= */
@@ -122,6 +158,21 @@ nav a:hover {
 }
 
 /* ========================= */
+/* GALLERY GRID */
+/* ========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ========================= */
 /* FOOTER */
 /* ========================= */
 
@@ -140,7 +191,16 @@ footer {
 @media (max-width: 768px) {
 
   .logo-container {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  header h1 {
+    font-size: 24px;
   }
 
   nav a {
@@ -148,13 +208,13 @@ footer {
     margin: 10px 0;
   }
 
-  header h1 {
-    font-size: 26px;
-  }
-
   .container {
     width: 95%;
     padding: 20px;
   }
 
+  .marquee-content img {
+    width: 180px;
+    height: 130px;
+  }
 }
