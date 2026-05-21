@@ -18,7 +18,7 @@
     }
 
     .logo {
-      height: 100px;
+      height: 70px;
       width: auto;
     }
 
@@ -48,6 +48,43 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
+
+    .login-box {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      background: #fff;
+      text-align: center;
+    }
+
+    .login-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-box button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #galleryContent {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -69,57 +106,89 @@
 
 </header>
 
-<div class="container">
+<!-- LOGIN BOX -->
+
+<div class="login-box" id="loginBox">
+  <h2>Gallery Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="checkLogin()">Login</button>
+
+  <div class="error" id="errorMsg"></div>
+</div>
+
+<!-- GALLERY CONTENT -->
+
+<div class="container" id="galleryContent">
 
   <h2>Event Photo Gallery</h2>
 
-  <!-- ========================= -->
   <!-- EVENT 1 -->
-  <!-- ========================= -->
 
   <div class="event-section">
     <h3>Community Meetup - June 2026</h3>
 
     <div class="gallery">
-      <img src="images/community1.jpg" alt="Community Meetup Photo 1">
-      <img src="images/community2.jpg" alt="Community Meetup Photo 2">
-      <img src="images/community3.jpg" alt="Community Meetup Photo 3">
+      <img src="images/community1.jpg" alt="">
+      <img src="images/community2.jpg" alt="">
+      <img src="images/community3.jpg" alt="">
     </div>
   </div>
 
-  <!-- ========================= -->
   <!-- EVENT 2 -->
-  <!-- ========================= -->
 
   <div class="event-section">
     <h3>Charity Fundraiser - July 2026</h3>
 
     <div class="gallery">
-      <img src="images/charity1.jpg" alt="Charity Event Photo 1">
-      <img src="images/charity2.jpg" alt="Charity Event Photo 2">
-      <img src="images/charity3.jpg" alt="Charity Event Photo 3">
+      <img src="images/charity1.jpg" alt="">
+      <img src="images/charity2.jpg" alt="">
+      <img src="images/charity3.jpg" alt="">
     </div>
   </div>
 
-  <!-- ========================= -->
   <!-- EVENT 3 -->
-  <!-- ========================= -->
 
   <div class="event-section">
     <h3>Annual Celebration - September 2026</h3>
 
     <div class="gallery">
-      <img src="images/annual1.jpg" alt="Annual Celebration Photo 1">
-      <img src="images/annual2.jpg" alt="Annual Celebration Photo 2">
-      <img src="images/annual3.jpg" alt="Annual Celebration Photo 3">
+      <img src="images/annual1.jpg" alt="">
+      <img src="images/annual2.jpg" alt="">
+      <img src="images/annual3.jpg" alt="">
     </div>
   </div>
 
 </div>
 
 <footer>
-  © 2026 English Dhamma Sunday School
+  © 2026 My Website
 </footer>
+
+<script>
+  function checkLogin() {
+
+    // HARD CODED LOGIN
+    const correctUsername = "englishdhamma";
+    const correctPassword = "kjewg834u5jqr";
+
+    const enteredUsername = document.getElementById("username").value;
+    const enteredPassword = document.getElementById("password").value;
+
+    if (
+      enteredUsername === correctUsername &&
+      enteredPassword === correctPassword
+    ) {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("galleryContent").style.display = "block";
+    } else {
+      document.getElementById("errorMsg").innerHTML =
+        "Invalid username or password";
+    }
+  }
+</script>
 
 </body>
 </html>
