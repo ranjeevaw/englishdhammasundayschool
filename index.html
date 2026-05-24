@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* MAIN CONTENT LAYOUT */
+    .main-content {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .left-content {
+      flex: 3;
+    }
+
+    .right-news {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .news-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
+
+    .news-card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .news-item {
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 900px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .right-news {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -63,44 +121,91 @@
 
 </div>
 
-<!-- ABOUT -->
-<div class="container">
-  <div class="card">
-    <h2>May Triple Gems Bless You 👋</h2>
+<!-- MAIN CONTENT AREA -->
+<div class="main-content">
 
-    <p>
-      We are the English Dhamma School. We are a proud dhamma school of
-      English Dhamma organisation. We endaevour to dissaminate Lord Buddha's
-      doctrine to Australian buddhist children in the English dhamma Sunday school.
-    </p>
+  <!-- LEFT SIDE -->
+  <div class="left-content">
+
+    <!-- ABOUT -->
+    <div class="container">
+      <div class="card">
+
+        <h2>May Triple Gems Bless You 👋</h2>
+
+        <p>
+          We are the English Dhamma School. We are a proud dhamma school of
+          English Dhamma organisation. We endaevour to dissaminate Lord Buddha's
+          doctrine to Australian buddhist children in the English dhamma Sunday school.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- DONATION SECTION -->
+    <div class="container">
+      <div class="card">
+
+        <h2>🙏 Donations</h2>
+
+        <p>
+          Your generous donations help support children's dhamma education,
+          learning materials, community events, and the ongoing activities of
+          the English Dhamma Sunday School.
+        </p>
+
+        <div class="donation-box">
+
+          <p><strong>Account Name:</strong> ENGLISH DHAMMA ORG</p>
+
+          <p><strong>BSB:</strong> 013-542</p>
+
+          <p><strong>Account Number:</strong> 430308072</p>
+
+          <p><strong>Reference:</strong> Donation</p>
+
+        </div>
+
+      </div>
+    </div>
+
   </div>
-</div>
 
-<!-- DONATION SECTION -->
-<div class="container">
-  <div class="card">
+  <!-- RIGHT SIDE NEWS PANEL -->
+  <div class="right-news">
 
-    <h2>🙏 Donations</h2>
+    <div class="news-card">
 
-    <p>
-      Your generous donations help support children's dhamma education,
-      learning materials, community events, and the ongoing activities of
-      the English Dhamma Sunday School.
-    </p>
+      <h2>📰 Latest News</h2>
 
-    <div class="donation-box">
+      <div class="news-item">
+        <h4>New School Term Begins</h4>
+        <p class="news-date">15 May 2026</p>
+        <p>Classes for the new dhamma school term begin this Sunday.</p>
+      </div>
 
-      <p><strong>Account Name:</strong> ENGLISH DHAMMA ORG</p>
+      <div class="news-item">
+        <h4>Vesak Celebration</h4>
+        <p class="news-date">10 May 2026</p>
+        <p>Students participated in the annual Vesak devotional program.</p>
+      </div>
 
-      <p><strong>BSB:</strong> 013-542</p>
+      <div class="news-item">
+        <h4>Volunteer Teachers Needed</h4>
+        <p class="news-date">2 May 2026</p>
+        <p>We welcome volunteers interested in supporting dhamma education.</p>
+      </div>
 
-      <p><strong>Account Number:</strong> 430308072</p>
-
-      <p><strong>Reference:</strong> Donation</p>
+      <div class="news-item">
+        <h4>Upcoming Fundraiser</h4>
+        <p class="news-date">28 April 2026</p>
+        <p>Community fundraiser event planned for July 2026.</p>
+      </div>
 
     </div>
 
   </div>
+
 </div>
 
 <footer>
