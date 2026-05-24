@@ -27,6 +27,31 @@
       margin: 8px 0;
       font-size: 16px;
     }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    .contact-form button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #555;
+    }
   </style>
 </head>
 
@@ -69,22 +94,61 @@
       Please feel free to contact the President regarding admissions,
       events, donations, volunteering opportunities, or general inquiries.
     </p>
+
     <br />
+
     <p>
-      You can also fill below form and click on Send button to send a message to us.
+      You can also fill the form below and click the Send button to send
+      a message to us.
     </p>
 
   </div>
 
   <!-- CONTACT FORM -->
 
-  <form class="contact-form">
+  <form
+    class="contact-form"
+    action="https://formsubmit.co/janakirajaguru@yahoo.com.au,ranjeevaw@outlook.com"
+    method="POST"
+  >
 
-    <input type="text" placeholder="Your Name" required>
+    <!-- Disable captcha -->
+    <input type="hidden" name="_captcha" value="false">
 
-    <input type="email" placeholder="Your Email" required>
+    <!-- Email subject -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Message From English Dhamma Sunday School Website"
+    >
 
-    <textarea rows="5" placeholder="Message"></textarea>
+    <!-- Redirect after submit -->
+    <input
+      type="hidden"
+      name="_next"
+      value="https://ranjeevaw.github.io/englishdhammasundayschool/thankyou.html"
+    >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Message"
+      required
+    ></textarea>
 
     <button type="submit">Send</button>
 
