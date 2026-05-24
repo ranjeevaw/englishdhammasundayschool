@@ -108,25 +108,36 @@
 
   <form
     class="contact-form"
-    action="https://formsubmit.co/janakirajaguru@yahoo.com.au,ranjeevaw@outlook.com"
+    action="https://api.web3forms.com/submit"
     method="POST"
   >
 
-    <!-- Disable captcha -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <!-- Email subject -->
+    <!-- Replace with your Web3Forms Access Key -->
     <input
       type="hidden"
-      name="_subject"
+      name="access_key"
+      value="dc9e8d04-ce73-4391-b888-76cfc378842b"
+    >
+
+    <!-- Email Subject -->
+    <input
+      type="hidden"
+      name="subject"
       value="New Message From English Dhamma Sunday School Website"
     >
 
-    <!-- Redirect after submit -->
+    <!-- Redirect After Submit -->
     <input
       type="hidden"
-      name="_next"
+      name="redirect"
       value="https://ranjeevaw.github.io/englishdhammasundayschool/thankyou.html"
+    >
+
+    <!-- Second Email Address -->
+    <input
+      type="hidden"
+      name="ccemail"
+      value="ranjeevaw@outlook.com"
     >
 
     <input
