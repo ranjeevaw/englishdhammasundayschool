@@ -260,3 +260,116 @@ footer {
     height: 50vw;
   }
 }
+
+/* ranjeeva */
+/* ========================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  /* NAVIGATION */
+  nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+  }
+
+  .hero img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  /* MAIN CONTENT */
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-content,
+  .right-news {
+    width: 100%;
+  }
+
+  /* CARDS */
+  .card,
+  .news-card {
+    padding: 18px;
+  }
+
+  /* TEXT */
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  /* IMAGES */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* BUTTONS */
+  button,
+  .download-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* FORMS */
+  input,
+  textarea {
+    font-size: 16px;
+  }
+
+}
