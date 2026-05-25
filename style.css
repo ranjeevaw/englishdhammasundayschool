@@ -212,6 +212,42 @@ footer {
   margin-top: 40px;
 }
 
+/* WELCOME TEXT COLOR ANIMATION */
+
+.hero-text h2,
+.hero-text p {
+  animation: colorChange 8s infinite;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+@keyframes colorChange {
+
+  0% {
+    color: blue;
+  }
+
+  20% {
+    color: yellow;
+  }
+
+  40% {
+    color: orange;
+  }
+
+  60% {
+    color: red;
+  }
+
+  80% {
+    color: white;
+  }
+
+  100% {
+    color: blue;
+  }
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
