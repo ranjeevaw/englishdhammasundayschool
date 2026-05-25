@@ -1,0 +1,217 @@
+<!-- ========================= -->
+<!-- FILE: learning-diary.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning Diary</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #f4f1ea;
+      font-family: Arial, sans-serif;
+    }
+
+    /* PAGE TITLE */
+    .page-header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    .page-header h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #5a4327;
+    }
+
+    .page-header p {
+      color: #666;
+      font-size: 17px;
+    }
+
+    /* BOOK PAGE */
+    .diary-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 30px 20px 60px;
+    }
+
+    .book-page {
+      width: 90%;
+      max-width: 900px;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.03) 1px,
+          transparent 1px
+        );
+      background-size: 100% 42px;
+      background-color: #fffdf7;
+
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+      padding: 50px 60px;
+      position: relative;
+      border: 1px solid #e4dccd;
+    }
+
+    /* PAGE EFFECT */
+    .book-page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 70px;
+      width: 3px;
+      height: 100%;
+      background: rgba(180, 70, 70, 0.2);
+    }
+
+    /* BOOK IMAGE */
+    .book-image {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* ENTRY SECTION */
+    .entry {
+      margin-bottom: 45px;
+    }
+
+    .entry h3 {
+      color: #5a4327;
+      margin-bottom: 8px;
+    }
+
+    .entry-date {
+      font-size: 15px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .entry p {
+      font-size: 18px;
+      line-height: 2.2;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .book-page {
+        padding: 35px 25px;
+      }
+
+      .book-page::before {
+        left: 35px;
+      }
+
+      .page-header h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-left">
+    <img src="logo.jpeg" class="logo" alt="School Logo">
+    <h1>Learning Diary</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="form.html">Forms</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="learning-diary.html">Learning Diary</a>
+  </nav>
+
+</header>
+
+<div class="page-header">
+  <h2>📖 Learning Diary</h2>
+
+  <p>
+    A special place to record what our students learned and experienced each week.
+  </p>
+</div>
+
+<div class="diary-wrapper">
+
+  <div class="book-page">
+
+    <!-- BOOK IMAGE -->
+    <!-- Replace this image with your own if you want -->
+    <img
+      src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"
+      alt="Open book"
+      class="book-image"
+    >
+
+    <!-- ENTRY 1 -->
+    <div class="entry">
+
+      <h3>Lesson Reflection</h3>
+
+      <div class="entry-date">
+        Date: 25 May 2026
+      </div>
+
+      <p>
+        Today we learned about kindness, compassion, and how Lord Buddha
+        encouraged us to speak gently and help others. Students discussed
+        examples of kindness they showed at home and school. We also practiced
+        a short meditation session and learned a new gatha together.
+      </p>
+
+    </div>
+
+    <!-- ENTRY 2 -->
+    <div class="entry">
+
+      <h3>Activities and Discussion</h3>
+
+      <div class="entry-date">
+        Date: 18 May 2026
+      </div>
+
+      <p>
+        Students participated in group discussions about gratitude and respect
+        towards parents and teachers. The class shared experiences and completed
+        a short activity reflecting on good actions they can practice during
+        the week.
+      </p>
+
+    </div>
+
+    <!-- ADD NEW ENTRIES BELOW -->
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 English Dhamma Sunday School
+</footer>
+
+</body>
+</html>
