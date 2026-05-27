@@ -1,201 +1,72 @@
+4. Use responsive images
+
+pls give me the full html with changes 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
-
   <link rel="stylesheet" href="style.css">
 
   <style>
-
-    *{
-      box-sizing:border-box;
-    }
-
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#f5f5f5;
-    }
-
-    /* HEADER */
-    header{
-      background:#ffffff;
-      padding:15px 20px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .header-left{
-      display:flex;
-      align-items:center;
-      gap:15px;
-      margin-bottom:15px;
-    }
-
-    .logo{
-      width:70px;
-      height:70px;
-      object-fit:cover;
-      border-radius:50%;
-    }
-
-    nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:#333;
-      font-weight:bold;
-    }
-
-    /* HERO */
-    .hero{
-      position:relative;
-      overflow:hidden;
-      background:#000;
-    }
-
-    .slider-track{
-      display:flex;
-      width:max-content;
-      animation:scroll 40s linear infinite;
-    }
-
-    .slider-track img{
-      width:100vw;
-      max-height:500px;
-      object-fit:cover;
-      flex-shrink:0;
-    }
-
-    @keyframes scroll{
-      from{
-        transform:translateX(0);
-      }
-      to{
-        transform:translateX(-50%);
-      }
-    }
-
-    .hero-text{
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%, -50%);
-      color:white;
-      text-align:center;
-      background:rgba(0,0,0,0.4);
-      padding:20px;
-      border-radius:12px;
-    }
-
     /* MAIN CONTENT LAYOUT */
-    .main-content{
-      display:flex;
-      gap:20px;
-      align-items:flex-start;
-      padding:20px;
+    .main-content {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
     }
 
-    .left-content{
-      flex:3;
+    .left-content {
+      flex: 3;
     }
 
-    .right-news{
-      flex:1;
-      min-width:280px;
+    .right-news {
+      flex: 1;
+      min-width: 280px;
     }
 
-    /* CARDS */
-    .container{
-      margin-bottom:20px;
+    .news-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
     }
 
-    .card{
-      background:#fff;
-      padding:25px;
-      border-radius:15px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.12);
+    .news-card h2 {
+      margin-top: 0;
+      color: #333;
     }
 
-    .news-card{
-      background:#fff;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.15);
-      margin-bottom:20px;
+    .news-item {
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ddd;
     }
 
-    .news-card h2{
-      margin-top:0;
-      color:#333;
+    .news-item:last-child {
+      border-bottom: none;
     }
 
-    .news-item{
-      margin-bottom:18px;
-      padding-bottom:12px;
-      border-bottom:1px solid #ddd;
+    .news-date {
+      font-size: 13px;
+      color: #777;
     }
 
-    .news-item:last-child{
-      border-bottom:none;
-    }
-
-    .news-date{
-      font-size:13px;
-      color:#777;
-    }
-
-    .donation-box{
-      background:#f8f8f8;
-      padding:15px;
-      border-radius:10px;
-      margin-top:15px;
-    }
-
-    /* RESPONSIVE IMAGE */
-    .responsive-image{
-      width:100%;
-      height:auto;
-      border-radius:15px;
-      margin-top:20px;
-      box-shadow:0 2px 12px rgba(0,0,0,0.2);
-      display:block;
-    }
-
-    footer{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:30px;
-    }
-
-    /* MOBILE */
-    @media (max-width:900px){
-
-      .main-content{
-        flex-direction:column;
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 900px) {
+      .main-content {
+        flex-direction: column;
       }
 
-      .right-news{
-        width:100%;
+      .right-news {
+        width: 100%;
       }
-
-      .slider-track img{
-        height:300px;
-      }
-
-      .hero-text{
-        width:90%;
-      }
-
     }
-
   </style>
 </head>
 
@@ -204,25 +75,8 @@
 <header>
 
   <div class="header-left">
-
-    <!-- LOGO -->
-    <img
-      src="logo.jpeg"
-      srcset="
-        logo.jpeg 200w,
-        logo.jpeg 400w
-      "
-      sizes="70px"
-      class="logo"
-      alt="Logo"
-      loading="eager"
-      decoding="async"
-      width="70"
-      height="70"
-    >
-
+    <img src="logo.jpeg" class="logo" alt="Logo">
     <h1>English Dhamma Sunday School</h1>
-
   </div>
 
   <nav>
@@ -242,85 +96,28 @@
 
   <div class="slider-track">
 
-    <!-- IMAGE 1 -->
-    <img
-      src="1.jpeg"
-      srcset="
-        1.jpeg 480w,
-        1.jpeg 800w,
-        1.jpeg 1400w
-      "
-      sizes="100vw"
-      alt="Hero Image 1"
-      loading="eager"
-      decoding="async"
-      width="1400"
-      height="500"
-    >
+    <img src="1.jpeg">
+    <img src="2.jpeg">
+    <img src="3.jpeg">
+    <img src="6.jpeg">
+    <img src="7.jpeg">
+    <img src="10.jpeg">
+    <img src="11.jpeg">
+    <img src="12.jpeg">
+    <img src="13.jpeg">
+    <img src="14.jpeg">
 
-    <!-- IMAGE 2 -->
-    <img
-      src="2.jpeg"
-      srcset="
-        2.jpeg 480w,
-        2.jpeg 800w,
-        2.jpeg 1400w
-      "
-      sizes="100vw"
-      alt="Hero Image 2"
-      loading="lazy"
-      decoding="async"
-      width="1400"
-      height="500"
-    >
-
-    <!-- IMAGE 3 -->
-    <img
-      src="3.jpeg"
-      srcset="
-        3.jpeg 480w,
-        3.jpeg 800w,
-        3.jpeg 1400w
-      "
-      sizes="100vw"
-      alt="Hero Image 3"
-      loading="lazy"
-      decoding="async"
-      width="1400"
-      height="500"
-    >
-
-    <!-- IMAGE 6 -->
-    <img
-      src="6.jpeg"
-      srcset="
-        6.jpeg 480w,
-        6.jpeg 800w,
-        6.jpeg 1400w
-      "
-      sizes="100vw"
-      alt="Hero Image 6"
-      loading="lazy"
-      decoding="async"
-      width="1400"
-      height="500"
-    >
-
-    <!-- IMAGE 7 -->
-    <img
-      src="7.jpeg"
-      srcset="
-        7.jpeg 480w,
-        7.jpeg 800w,
-        7.jpeg 1400w
-      "
-      sizes="100vw"
-      alt="Hero Image 7"
-      loading="lazy"
-      decoding="async"
-      width="1400"
-      height="500"
-    >
+    <!-- duplicate for smooth loop -->
+    <img src="1.jpeg">
+    <img src="2.jpeg">
+    <img src="3.jpeg">
+    <img src="6.jpeg">
+    <img src="7.jpeg">
+    <img src="10.jpeg">
+    <img src="11.jpeg">
+    <img src="12.jpeg">
+    <img src="13.jpeg">
+    <img src="14.jpeg">
 
   </div>
 
@@ -331,7 +128,7 @@
 
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN CONTENT AREA -->
 <div class="main-content">
 
   <!-- LEFT SIDE -->
@@ -344,85 +141,103 @@
         <h2>May Triple Gems Bless You 👋</h2>
 
         <p>
-          We are the English Dhamma Sunday School, a proud initiative of the
-          English Dhamma Organisation.
+          We are the English Dhamma Sunday School, a proud initiative of the English Dhamma Organisation. Our mission is to disseminate the teachings of Lord Buddha to Buddhist children in Australia through the English language, helping them develop strong moral values, mindfulness, compassion, and respect within a modern multicultural environment.
+<br /><br />
+Our school follows the Sri Lankan Buddhist Dhamma School curriculum, carefully adapted and delivered in English to make learning meaningful and accessible for children growing up in Australia.
+<br /><br />
+Currently, we conduct classes across three learning groups:
+<br /><br />
+* Junior Class – Prep, Grade 1, and Grade 2 students <br />
+* Year 3 Class <br />
+* Year 4 and Above Class <br /><br />
+
+We warmly welcome students up to 15 years of age.
+<br /> <br />
+At English Dhamma Sunday School, we strongly value the partnership between teachers and parents. We maintain close communication with families and strive to shape our teaching methods to best support the aspirations and expectations parents have for their children’s spiritual and personal development.
+<br /><br />
+We invite you and your family to join us in nurturing the next generation with Buddhist values, kindness, discipline, and wisdom in a warm and supportive community environment.
+
         </p>
 
       </div>
     </div>
 
-    <!-- DONATIONS -->
+    <!-- DONATION SECTION -->
     <div class="container">
       <div class="card">
 
         <h2>🙏 Donations</h2>
 
         <p>
-          Your generous donations help support children's dhamma education.
+          Your generous donations help support children's dhamma education,
+          learning materials, community events, and the ongoing activities of
+          the English Dhamma Sunday School.
         </p>
 
         <div class="donation-box">
 
           <p><strong>Account Name:</strong> ENGLISH DHAMMA ORG</p>
+
           <p><strong>BSB:</strong> 013-542</p>
+
           <p><strong>Account Number:</strong> 430308072</p>
+
+          <p><strong>Reference:</strong> Donation</p>
 
         </div>
 
       </div>
     </div>
+<!-- ENROLLMENT POSTER SECTION -->
+<div class="container">
+  <div class="card" style="text-align:center;">
 
-    <!-- ENROLLMENT -->
-    <div class="container">
-      <div class="card" style="text-align:center;">
+    <h2>📚 2026 Student Enrollments Open</h2>
 
-        <h2>📚 2026 Student Enrollments Open</h2>
+    <p>
+      We warmly welcome new students and families to join the
+      English Dhamma Sunday School community.
+    </p>
 
-        <p>
-          We warmly welcome new students and families.
-        </p>
+    <!-- ENROLLMENT POSTER IMAGE -->
+    <img
+      src="enroll.jpg"
+      alt="Enrollment Poster"
+      style="
+        width:100%;
+        max-width:700px;
+        border-radius:15px;
+        margin-top:20px;
+        box-shadow:0 2px 12px rgba(0,0,0,0.2);
+      "
+    >
 
-        <img
-          src="enroll.jpg"
-          srcset="
-            enroll.jpg 480w,
-            enroll.jpg 800w,
-            enroll.jpg 1400w
-          "
-          sizes="(max-width: 768px) 100vw, 700px"
-          alt="Enrollment Poster"
-          class="responsive-image"
-          loading="lazy"
-          decoding="async"
-          width="700"
-          height="900"
-        >
+    <p style="margin-top:20px;">
+      Admissions are now open for children up to 15 years of age.
+      Please contact us for more information or download the
+      application forms from the Forms page.
+    </p>
 
-        <p style="margin-top:20px;">
-          Admissions are now open for children up to 15 years of age.
-        </p>
-
-        <a
-          href="form.html"
-          style="
-            display:inline-block;
-            margin-top:15px;
-            padding:12px 25px;
-            background:#333;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-          "
-        >
-          Download Application Forms
-        </a>
-
-      </div>
-    </div>
+    <a
+      href="form.html"
+      style="
+        display:inline-block;
+        margin-top:15px;
+        padding:12px 25px;
+        background:#333;
+        color:white;
+        text-decoration:none;
+        border-radius:8px;
+      "
+    >
+      Download Application Forms
+    </a>
 
   </div>
+</div>
+  </div>
 
-  <!-- NEWS -->
+  <!-- RIGHT SIDE NEWS PANEL -->
   <div class="right-news">
 
     <div class="news-card">
@@ -432,16 +247,26 @@
       <div class="news-item">
         <h4>Demise of Agalabada Piyasiri Maha Nayaka Thero</h4>
         <p class="news-date">24 May 2026</p>
+        <p>The beloved teacher of our chief Incumbent Most Ven. Sewanagala Nandarathana Thero passed away and final rites are held today 3pm at Sittamgalla Raja Maha Viharaya in Sri Lanka.</p>
       </div>
 
       <div class="news-item">
         <h4>Vesak Sil Program</h4>
         <p class="news-date">17 May 2026</p>
+        <p>Our Vesak sil program for the Sunday School kids were held today.
+        Kids dressed in white attire observed the 8 precepts and oarents provided the upasaka danaya to kids.</p>
       </div>
 
       <div class="news-item">
-        <h4>Vesak Lanterns Making Program</h4>
+        <h4>Vesak Lanterns Making program</h4>
         <p class="news-date">10 May 2026</p>
+        <p>Kids made and decorated the Vesak lanterns today.</p>
+      </div>
+
+      <div class="news-item">
+        <h4>Free stage darama for the Sunday School Kids</h4>
+        <p class="news-date">14 June 2026</p>
+        <p>A free drama is planned for our kids to enjoy which will be held in Cranbourne Community Theatre. More Details in the Events page....</p>
       </div>
 
     </div>
