@@ -306,115 +306,82 @@ footer {
   }
 }
 
-/* ranjeeva */
-/* ========================= */
-/* MOBILE RESPONSIVE DESIGN */
-/* ========================= */
-
-@media (max-width: 900px) {
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px){
 
   /* HEADER */
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
+  .header-left{
+    flex-direction:column;
+    text-align:center;
   }
 
-  .header-left {
-    flex-direction: column;
-    gap: 10px;
+  nav{
+    justify-content:center;
+    gap:10px;
   }
 
-  .logo {
-    width: 70px;
-    height: 70px;
+  nav a{
+    font-size:14px;
   }
 
-  header h1 {
-    font-size: 24px;
+  /* HERO SLIDER */
+  .slider-track img{
+    height:250px;
+    width:auto;
   }
 
-  /* NAVIGATION */
-  nav {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  .hero-text{
+    width:90%;
+    padding:15px;
   }
 
-  nav a {
-    padding: 8px 12px;
-    font-size: 14px;
+  .hero-text h2{
+    font-size:24px;
   }
 
-  /* HERO SECTION */
-  .hero {
-    height: auto;
+  .hero-text p{
+    font-size:14px;
   }
 
-  .hero img {
-    height: 250px;
-    object-fit: cover;
+  /* MAIN CONTENT STACK */
+  .main-content{
+    flex-direction:column;
+    padding:10px;
   }
 
-  .hero-text {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .hero-text h2 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-  /* MAIN CONTENT */
-  .main-content {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .left-content,
-  .right-news {
-    width: 100%;
+  .right-news{
+    width:100%;
   }
 
   /* CARDS */
   .card,
-  .news-card {
-    padding: 18px;
+  .news-card{
+    padding:15px;
   }
 
   /* TEXT */
-  p {
-    font-size: 15px;
-    line-height: 1.7;
+  h1{
+    font-size:24px;
   }
 
-  h2 {
-    font-size: 24px;
+  h2{
+    font-size:20px;
   }
 
-  /* IMAGES */
-  img {
-    max-width: 100%;
-    height: auto;
+  p{
+    font-size:15px;
+    line-height:1.6;
   }
 
-  /* BUTTONS */
-  button,
-  .download-btn {
-    width: 100%;
-    text-align: center;
+  /* BUTTON */
+  a{
+    word-break:break-word;
   }
 
-  /* FORMS */
-  input,
-  textarea {
-    font-size: 16px;
+  /* ENROLLMENT IMAGE */
+  .responsive-image{
+    width:100%;
+    height:auto;
   }
 
 }
