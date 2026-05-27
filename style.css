@@ -70,12 +70,19 @@ nav a:hover {
   animation: scrollLeft 60s linear infinite;
 }
 
-.slider-track img {
+/*.slider-track img {
   width: 350px;
   height: 500px;
   object-fit: contain;
   flex-shrink: 0;
   background: black;
+}*/
+
+.slider-track img{
+  height:500px;
+  width:auto;
+  object-fit:cover;
+  flex-shrink:0;
 }
 
 /* SLIDER ANIMATION */
