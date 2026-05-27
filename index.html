@@ -7,9 +7,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- PRELOAD HERO IMAGE -->
-  <link rel="preload" as="image" href="1-small.webp">
-
   <style>
 
     *{
@@ -178,7 +175,7 @@
       margin-top:30px;
     }
 
-    /* MOBILE RESPONSIVE */
+    /* MOBILE */
     @media (max-width:900px){
 
       .main-content{
@@ -208,12 +205,12 @@
 
   <div class="header-left">
 
-    <!-- RESPONSIVE LOGO -->
+    <!-- LOGO -->
     <img
-      src="logo-small.webp"
+      src="logo.jpeg"
       srcset="
-        logo-small.webp 200w,
-        logo-medium.webp 400w
+        logo.jpeg 200w,
+        logo.jpeg 400w
       "
       sizes="70px"
       class="logo"
@@ -245,14 +242,13 @@
 
   <div class="slider-track">
 
-    <!-- RESPONSIVE HERO IMAGES -->
-
+    <!-- IMAGE 1 -->
     <img
-      src="1-small.webp"
+      src="1.jpeg"
       srcset="
-        1-small.webp 480w,
-        1-medium.webp 800w,
-        1-large.webp 1400w
+        1.jpeg 480w,
+        1.jpeg 800w,
+        1.jpeg 1400w
       "
       sizes="100vw"
       alt="Hero Image 1"
@@ -262,12 +258,13 @@
       height="500"
     >
 
+    <!-- IMAGE 2 -->
     <img
-      src="2-small.webp"
+      src="2.jpeg"
       srcset="
-        2-small.webp 480w,
-        2-medium.webp 800w,
-        2-large.webp 1400w
+        2.jpeg 480w,
+        2.jpeg 800w,
+        2.jpeg 1400w
       "
       sizes="100vw"
       alt="Hero Image 2"
@@ -277,12 +274,13 @@
       height="500"
     >
 
+    <!-- IMAGE 3 -->
     <img
-      src="3-small.webp"
+      src="3.jpeg"
       srcset="
-        3-small.webp 480w,
-        3-medium.webp 800w,
-        3-large.webp 1400w
+        3.jpeg 480w,
+        3.jpeg 800w,
+        3.jpeg 1400w
       "
       sizes="100vw"
       alt="Hero Image 3"
@@ -292,15 +290,32 @@
       height="500"
     >
 
+    <!-- IMAGE 6 -->
     <img
-      src="6-small.webp"
+      src="6.jpeg"
       srcset="
-        6-small.webp 480w,
-        6-medium.webp 800w,
-        6-large.webp 1400w
+        6.jpeg 480w,
+        6.jpeg 800w,
+        6.jpeg 1400w
       "
       sizes="100vw"
       alt="Hero Image 6"
+      loading="lazy"
+      decoding="async"
+      width="1400"
+      height="500"
+    >
+
+    <!-- IMAGE 7 -->
+    <img
+      src="7.jpeg"
+      srcset="
+        7.jpeg 480w,
+        7.jpeg 800w,
+        7.jpeg 1400w
+      "
+      sizes="100vw"
+      alt="Hero Image 7"
       loading="lazy"
       decoding="async"
       width="1400"
@@ -316,7 +331,7 @@
 
 </div>
 
-<!-- MAIN CONTENT AREA -->
+<!-- MAIN CONTENT -->
 <div class="main-content">
 
   <!-- LEFT SIDE -->
@@ -336,7 +351,7 @@
       </div>
     </div>
 
-    <!-- DONATION SECTION -->
+    <!-- DONATIONS -->
     <div class="container">
       <div class="card">
 
@@ -349,9 +364,7 @@
         <div class="donation-box">
 
           <p><strong>Account Name:</strong> ENGLISH DHAMMA ORG</p>
-
           <p><strong>BSB:</strong> 013-542</p>
-
           <p><strong>Account Number:</strong> 430308072</p>
 
         </div>
@@ -359,19 +372,22 @@
       </div>
     </div>
 
-    <!-- ENROLLMENT POSTER -->
+    <!-- ENROLLMENT -->
     <div class="container">
       <div class="card" style="text-align:center;">
 
         <h2>📚 2026 Student Enrollments Open</h2>
 
-        <!-- RESPONSIVE ENROLLMENT IMAGE -->
+        <p>
+          We warmly welcome new students and families.
+        </p>
+
         <img
-          src="enroll-small.webp"
+          src="enroll.jpg"
           srcset="
-            enroll-small.webp 480w,
-            enroll-medium.webp 800w,
-            enroll-large.webp 1400w
+            enroll.jpg 480w,
+            enroll.jpg 800w,
+            enroll.jpg 1400w
           "
           sizes="(max-width: 768px) 100vw, 700px"
           alt="Enrollment Poster"
@@ -406,7 +422,7 @@
 
   </div>
 
-  <!-- RIGHT SIDE NEWS PANEL -->
+  <!-- NEWS -->
   <div class="right-news">
 
     <div class="news-card">
