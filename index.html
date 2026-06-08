@@ -65,7 +65,21 @@
     }
   </style>
 </head>
+<script>
 
+
+  function copyText(text, button) {
+  navigator.clipboard.writeText(text);
+
+  const original = button.innerText;
+  button.innerText = "✓ Copied";
+
+  setTimeout(() => {
+    button.innerText = original;
+  }, 2000);
+}
+  
+</script>
 <body>
 
 <header>
@@ -178,32 +192,59 @@ We invite you and your family to join us in nurturing the next generation with B
       </div>
     </div>
 
-    <!-- DONATION SECTION -->
-    <div class="container">
-      <div class="card">
+<!-- DONATION SECTION -->
+<div class="container">
+  <div class="card">
 
-        <h2>🙏 Donations</h2>
+    <h2>🙏 Donations</h2>
 
-        <p>
-          Your generous donations help support children's dhamma education,
-          learning materials, community events, and the ongoing activities of
-          the English Dhamma Sunday School.
-        </p>
+    <p>
+      Your generous donations help support children's dhamma education,
+      learning materials, community events, and the ongoing activities of
+      the English Dhamma Sunday School.
+    </p>
 
-        <div class="donation-box">
+    <div class="donation-box">
 
-          <p><strong>Account Name:</strong> ENGLISH DHAMMA ORG</p>
+      <p>
+        <strong>Account Name:</strong>
+        ENGLISH DHAMMA ORG
+      </p>
 
-          <p><strong>BSB:</strong> 013-542</p>
+      <p>
+        <strong>BSB:</strong>
+        013-542
 
-          <p><strong>Account Number:</strong> 430308072</p>
+        <button
+          class="copy-button"
+          onclick="copyText('013542')"
+        >
+          Copy
+        </button>
+      </p>
 
-          <p><strong>Reference:</strong> Donation</p>
+      <p>
+        <strong>Account Number:</strong>
+        430308072
 
-        </div>
+        <button
+          class="copy-button"
+          onclick="copyText('430308072')"
+        >
+          Copy
+        </button>
+        
+      </p>
 
-      </div>
+      <p>
+        <strong>Reference:</strong>
+        Donation
+      </p>
+
     </div>
+
+  </div>
+</div>
     
 <!-- kanthoru SECTION -->
 <div class="container">
