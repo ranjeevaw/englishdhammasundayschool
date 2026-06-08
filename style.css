@@ -497,3 +497,8 @@ font-size: 0.9rem;
       0 0 5px rgba(212,160,23,0.4);
   }
 }
+
+
+.copy-button.copied {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
