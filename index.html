@@ -67,15 +67,17 @@
 </head>
 <script>
 
-
-  function copyText(text, button) {
+function copyText(text, button) {
   navigator.clipboard.writeText(text);
+
+  button.classList.add("copied");
 
   const original = button.innerText;
   button.innerText = "✓ Copied";
 
   setTimeout(() => {
     button.innerText = original;
+    button.classList.remove("copied");
   }, 2000);
 }
   
@@ -216,23 +218,25 @@ We invite you and your family to join us in nurturing the next generation with B
         013-542
 
         <button
-          class="copy-button"
-          onclick="copyText('013542')"
-        >
-          Copy
-        </button>
+  class="copy-button"
+  onclick="copyText('013542', this)"
+>
+  Copy
+</button>
+
+
       </p>
 
       <p>
         <strong>Account Number:</strong>
         430308072
 
-        <button
-          class="copy-button"
-          onclick="copyText('430308072')"
-        >
-          Copy
-        </button>
+<button
+  class="copy-button"
+  onclick="copyText('430308072', this)"
+>
+  Copy
+</button>
         
       </p>
 
