@@ -1,490 +1,419 @@
-<!-- ========================= -->
-<!-- FILE: learning-diary.html -->
-<!-- ========================= -->
+  <!-- ========================= -->
+  <!-- FILE: learning-diary.html -->
+  <!-- ========================= -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <title>Learning Diary</title>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Learning Diary</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-  <style>
-
-    body {
-      margin: 0;
-      background: #f4f1ea;
-      font-family: Arial, sans-serif;
-    }
-
-    /* PAGE TITLE */
-    .page-header {
-      text-align: center;
-      padding: 30px 20px 10px;
-    }
-
-    .page-header h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-      color: #5a4327;
-    }
-
-    .page-header p {
-      color: #666;
-      font-size: 17px;
-    }
-
-    /* BOOK PAGE */
-    .diary-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 30px 20px 60px;
-    }
-
-    .book-page {
-
-      width: 90%;
-      max-width: 900px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.03) 1px,
-          transparent 1px
-        );
-
-      background-size: 100% 42px;
-      background-color: #fffdf7;
-
-      border-radius: 12px;
-
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-
-      padding: 50px 60px;
-
-      position: relative;
-
-      border: 1px solid #e4dccd;
-    }
-
-    /* RED VERTICAL LINE */
-    .book-page::before {
-
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-
-      left: 70px;
-
-      width: 3px;
-
-      height: 100%;
-
-      background: rgba(180, 70, 70, 0.25);
-    }
-
-    /* BOOK IMAGE */
-    .book-image {
-
-      width: 100%;
-
-      max-height: 280px;
-
-      object-fit: cover;
-
-      border-radius: 10px;
-
-      margin-bottom: 30px;
-
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    /* ENTRY SECTION */
-    .entry {
-      margin-bottom: 45px;
-    }
-
-    .entry h3 {
-
-      color: #5a4327;
-
-      margin-bottom: 8px;
-
-      padding-left: 40px;
-    }
-
-    .entry-date {
-
-      font-size: 15px;
-
-      color: #777;
-
-      margin-bottom: 15px;
-
-      padding-left: 40px;
-    }
-
-    /* DIARY TEXT */
-    .entry p {
-
-      font-size: 18px;
-
-      line-height: 2.2;
-
-      color: #444;
-
-      /* START TEXT AFTER RED LINE */
-      padding-left: 40px;
-
-      text-align: left;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* MOBILE RESPONSIVE */
-    @media (max-width: 768px) {
-
-      .book-page {
-        padding: 35px 25px;
+    <style>
+      body {
+        margin: 0;
+        background: #f4f1ea;
+        font-family: Arial, sans-serif;
       }
 
-      .book-page::before {
-        left: 35px;
-      }
-
-      .entry h3,
-      .entry-date,
-      .entry p {
-        padding-left: 25px;
+      /* PAGE TITLE */
+      .page-header {
+        text-align: center;
+        padding: 30px 20px 10px;
       }
 
       .page-header h2 {
-        font-size: 28px;
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #5a4327;
       }
 
+      .page-header p {
+        color: #666;
+        font-size: 17px;
+      }
+
+      /* BOOK PAGE */
+      .diary-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 30px 20px 60px;
+      }
+
+      .book-page {
+        width: 90%;
+        max-width: 900px;
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.03) 1px,
+            transparent 1px
+          );
+        background-size: 100% 42px;
+        background-color: #fffdf7;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 50px 60px;
+        position: relative;
+        border: 1px solid #e4dccd;
+      }
+  
+      /* RED VERTICAL LINE */
+      .book-page::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 70px;
+        width: 3px;
+        height: 100%;
+        background: rgba(180, 70, 70, 0.25);
+      }
+
+      /* BOOK IMAGE */
+      .book-image {
+        width: 100%;
+        max-height: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+
+      /* ENTRY SECTION */
+      .entry {
+        margin-bottom: 45px;
+      }
+
+      .entry h3 {
+        color: #5a4327;
+        margin-bottom: 8px;
+        padding-left: 40px;
+      }
+
+      .entry-date {
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 15px;
+        padding-left: 40px;
+      }
+
+      /* DIARY TEXT */
       .entry p {
-        font-size: 16px;
-        line-height: 2;
+        font-size: 18px;
+        line-height: 2.2;
+        color: #444;
+        padding-left: 40px;
+        text-align: left;
       }
-    }
 
-  </style>
-
-</head>
-
-<body>
-
-<header>
-
-  <div class="header-left">
-
-    <img src="logo.jpeg" class="logo" alt="School Logo">
-
-    <h1>Learning Diary</h1>
-
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="form.html">Forms / Library</a>
-    <a href="learning-diary.html">Learning Diary</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
-
-</header>
-
-<div class="page-header">
-
-  <h2>📖 Learning Diary</h2>
-
-  <p>
-    A special place to record what our students learned and experienced each week.
-  </p>
-
-</div>
-
-<div class="diary-wrapper">
-
-  <div class="book-page">
-
-    <!-- BOOK IMAGE -->
-    <img
-      src="images/open-book.jpg"
-      alt="Open book"
-      class="book-image"
-    >
-
-      <!-- ENTRY 1 -->
-    <div class="entry">
-
-      <h3>Lesson Reflection</h3>
-<br />
-
-        <div class="entry-date">
-        Date: 19 July 2026
-      </div>
-
-      <p>
-
-Today we successfully conducted our usual 2 classes.
-<br />
-Junior class<br />
-And grade 4 and above class
-<br />
-For junior class they learned the story of “sopaka” and how lord buddha helped him.
-<br />
-For the grade 4 and above class they continued learning pali stanzas used to worship the sacred bodhi tree. It was encouraging to see how kids were able to memorise the stanzas.
-<br />
-We welcomed today our 2 new students
-<br />
-Enuki and<br />
-Miheli<br />
-<br />
-I believe they should have enjoyed their time today with our other kids.
-<br />
-At the break kids enjoyed their snacks, candy and chocolates.
-<br />
-After the break our rev Nandarathana thero taught the lesson 10 which explained traditions we need to follow when we go to temple.
-<br />
-As always please provide your feedback good or bad.
-<br />
-May triple gems bless you all !
-<br />
-🙏🏿🙏🏿
-       <br />
-      </p>
-
-       <div class="entry-date">
-        Date: 21 June 2026
-      </div>
-
-      <p>
-        
-
-Today we successfully wrapped up the semester conducting junior class and grade 4 and above class.
-Junior class learned about merits of unity and were given the kids an exercise where they could 
-        write their own ideas and kids enjoyed it.
-Grade 4 and above class was very interesting. They learned about the bodhi tree and the pali stanzas 
-        used to worship the bodi tree. Within the class kids were asked to memorise below 2 stanzas.
-<br />
-1. යස්ස මූලේ නිසින්නෝව<br />
-2. ⁠ඉමේ ඒතේ මහා බෝදී<br />
-
-It was amazing to see almost all the kids memorised at least one stanza in the session.
-Then happened the very interesting part of the day. The third stanza was below.<br />
-
-ඉන්ද නීල වන්න පත්ත<br />
-
-I told kids it’s a tough one to memorise and if anyone memorise it before 4pm i will 
-        give 20$. Kids were very enthusiastic and everyone accepted the challenge.<br />
-
-Then Jenaru came to me and said it’s a bad practice to promise money asking kids to study. 
-        I was speechless. I told him you’re correct! This incident is open for discussion; 
-        what do you all think? I thought to myself next time i would prmoise a gift, not money ☺️<br />
-
-Then at 4 o’clock nobody was able to memorise it. But Nem and Senitha were very close; 
-        they told the stanza with just 2 words missing. 🫡<br />
-
-After that we finished the class as usual with Sunday school song and meditation.<br />
-
-This wrap up the semester. We distributed chocolates as usual and some biscuits 
-        from yesterday’s event. Merits to all who provided that.<br />
-
-We will let you know when we are resuming classes. Hope you all will have a wonderful school holidays.<br />
-
-May triple gems bless you all!<br />
-
-🙏🏿🙏🏿🙏🏿<br />
-
-Please practice with kids these 2 stanzas in the school holidays.<br />
-       
-      </p>
-      
-    <!-- ENTRY 1 -->
-    <div class="entry">
-
-      <h3>Lesson Reflection</h3>
-<br />
-
-       <div class="entry-date">
-        Date: 7 June 2026
-      </div>
-
-      <p>
-        ⁩
-We successfully conducted 2 classes today; junior class and grade 3 and above class. Our Rev. Nandarathana and I taught the both classes one period each. Before I forget I collected flower baskets kids forgot to take homr and I can give them on 21st June, when we meet in Dhamma school.
-<br />
-It was really encouraging to see amidst long weekend kids came to dharma school.
-<br />
-For the grade 3 and above class pupils answered the exercise questions on lesson Upatissa and Kolitha. All the kids were keen to go through the lesson and find the answers and the discussions with Rachel was interesting. Senitha who raise nice logical questions remembered the name of Assaji thero (one of the answers for an exercise question) which made me very proud of the progress of our students. Then Seth requested to tell the story of Angulimala and we went through that story. Aura already knew the story and clearly explained how Lord Buddha controlled Angulimala. Thereafter we completed the Vesak week’s discussion about the story of Prince Siddhartha until he enlighten on Vesak poya day and touch based on Sath Sathiya.
-<br />
-For the junior class Nandarathana thero taught the Queen Maha maya’s dream. 
-<br />
-Then we had the recess. Kids enjoyed the snacks they brought from home and chocolates which was distributed. During the recess a small incident was reported between boys and it was settled after talking to every party involved. During the recess we allow kids to play in the backyard, but it was brought to our notice that some boys are climbing on top of a block of plastic barricade which is dangerous and we’ll discuss internally and we unfortunately may need to stop kids playing outside. And also to reduce the recess time from 15 minutes to 5 minutes. Please let us know your thoughts on this.
-<br />
-After the break the junior class learned 2 more precious stories. One story about Nandiya the leader of Deers who talked to the king and liberated all the animals / creatures from being hunted for fun and food. The other story was the famous “Sama Jathakaya”; hope you all can remember that.
-<br />
-Our Rev. after the break tried his best to teach the kids tactics how to control emotions such as anger, bullying, being bullied, annoyance etc. He asked our senior students to hold on to a heavy object in outstretched hand and keep holding it until they couldn’t do it any more as the hand was aching. So he went ahead to describe how a small annoyance feeling if kept in your head longer, how it will eventually stress your mind and body; best to get rid of that feeling asap. Then he taught the kids if somebody is talking rough words hear it from one ear and let it go out from the other ear.
-<br />
-After the Dhamma school song and meditation kids went home on their merry ways. 
-<br />
-Next week there’s NO Sunday school. Please drop your kids to the drama excursion in Cranbourne. Details will be shared soon. Drama is starting at 3pm.
-<br />
-Any questions, comments, suggestions feel free to discuss here or anonymously send a message through Sunday school web site (Contact Us page).
-<br />
-May triple gems blessings be with you!! 
-<br />
-🙏🏿🙏🏿🙏🏿
-       
-      </p>
-<br />
-      
-      <div class="entry-date">
-        Date: 31 May 2026
-      </div>
-
-      <p>
-        ⁩
-
-Today we successfully conducted the Sunday school and our junior school teacher was running some errands and was absent. She has informed that she won’t be able to come next week too.
-<br />
-Therefore we had 2 classes and Janaki akka managed the junior class. We had full house today 18 kids present and it’s a pleasure sight as teachers to see kids enthusiastically attending our classes. We missed Evan, Raynon, Riley and Shanon and hope they’ll join next week.
-<br />
-Today junior school learnt සුව ජාතකය. Where a young parrot fed his blind parents one day found delicious mangoes from a far away island.
-<br />
-Daddy parrot recognised the mangoes were from that island and warned the son not to go there as it was dangerous. But son didn’t listen and to serve his craving went there again and a strong cyclone threw him to the sea and perished. The story emphasised the value of listening to parents/ elders.
-<br />
-The year 3 and above class learned about vesak festival and the story how බෝදිසත්ව in the heaven born as a human being named prince සිද්දාර්ත with utmost courage attaining buddhahood finally discovering the 4 noble truths and help many to enlighten.
-<br />
-There was a funny moment when it was discovered how prince siddhartha left the castle whilst රාහුල had been born and when it was asked how sad princess යශෝදරා should have felt, seth said if i faced the situation i would have selected another partner happily. This made the whole class laugh.
-<br />
-We also made it a point to pay gratitude for the kids and parents who cleaned the temple yesterday in the vesak day which was a great wholesome deed.
-<br />
-The website will be updated tonight. If you have any ideas please let us know. Any comments good or bad are welcome. In the web site contact us page you can provide anonymous comments.
-<br />
-Please make sure your vesak decorations are fully lighted tonight too 😊
-<br />
-Have a great week ahead!
-<br />
-තෙරුවන් සරනය්
-<br />
-🙏🏿🙏🏿
-        <br />
-      </p>
-
-      <br />
-      
-      <div class="entry-date">
-        Date: 25 May 2026
-      </div>
-
-      <p>
-
-        Dear Parents,<br><br>
-
-        Today the final rites of the teacher of our Hon. Sewanagala
-        Nandarathana Thero, Most Ven. Agalabada Piyasiri Thero,
-        will take place in Sri Lanka around 3pm Sri Lankan time.
-        We from the Sunday School wish the Honourable Thero
-        the supreme bliss of Nibbana. 🙏🏿🙏🏿🙏🏿
-
-        <br><br>
-
-        Today was a busy day for Janaki Akka and our Nandarathana Thero.
-        While Janaki Akka attended the state delegates conference,
-        Nandarathana Thero led the ශ්‍රමදානය organised by
-        Maliyadeva OBA at our English Dhamma Temple in Gembrook.
-
-        <br><br>
-
-        Thanks to our junior school teacher, the Sunday School
-        activities continued successfully without interruption.
-
-        <br><br>
-
-        We warmly welcomed a new student who joined today and she
-        will study with the junior school pupils.
-
-        <br><br>
-
-        Today we conducted two classes:
-        the Junior Class and the Year 3 and Above Class.
-
-        <br><br>
-
-        Students actively participated in the discussions and
-        enjoyed the learning activities throughout the session.
-
-        <br><br>
-
-        The children also enjoyed snacks and tea during the recess
-        break and spent quality time together.
-
-        <br><br>
-
-        We thank all parents for their valuable communication and support.
-
-        <br><br>
-
-        Any comments or feedback are warmly welcome. 🙏🏿
-
-        <br><br>
-
-        තෙරුවන් සරණයි
-
-      </p>
-
+      footer {
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* MOBILE RESPONSIVE */
+      @media (max-width: 768px) {
+        .book-page {
+          padding: 35px 25px;
+        }
+
+        .book-page::before {
+          left: 35px;
+        }
+
+        .entry h3,
+        .entry-date,
+        .entry p {
+          padding-left: 25px;
+        }
+
+        .page-header h2 {
+          font-size: 28px;
+        }
+
+        .entry p {
+          font-size: 16px;
+          line-height: 2;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <header>
+    <div class="header-left">
+      <img src="logo.jpeg" class="logo" alt="School Logo">
+      <h1>Learning Diary</h1>
     </div>
 
-    <!-- ENTRY 2 -->
-    <div class="entry">
-
-      <h3>Lesson Reflection</h3>
-
-      <div class="entry-date">
-        Date: 17 May 2026
-      </div>
-
-      <p>
-
-        Today we conducted the Kids Sil Program.
-
-        <br><br>
-
-        Students learned about:
-        Mattakundalee Jathakaya,
-        Vishaka Mahanuwara Thun Biya,
-        and the importance of observing Sil.
-
-        <br><br>
-
-        The students participated enthusiastically and enjoyed
-        the spiritual activities throughout the day.
-
-      </p>
-
-    </div>
-
-    <!-- ADD NEW ENTRIES BELOW -->
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="form.html">Forms / Library</a>
+      <a href="learning-diary.html">Learning Diary</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  
+  <div class="page-header">
+    <h2>📖 Learning Diary</h2>
+    <p>
+      A special place to record what our students learned and experienced each week.
+    </p>
   </div>
 
-</div>
+  <div class="diary-wrapper">
+    <div class="book-page">
 
-<footer>
-  © 2026 English Dhamma Sunday School
-</footer>
+      <!-- BOOK IMAGE -->
+      <img
+        src="images/open-book.jpg"
+        alt="Open book"
+        class="book-image"
+      >
+  
+      <!-- ENTRY 1 — 19 July 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 19 July 2026</div>
+        <p>
+          Today we successfully conducted our usual 2 classes.<br />
+          Junior class<br />
+          And grade 4 and above class<br />
+          For junior class they learned the story of &ldquo;sopaka&rdquo; and how lord buddha helped him.<br />
+          For the grade 4 and above class they continued learning pali stanzas used to worship the sacred bodhi tree. It was encouraging to see how kids were able to memorise the stanzas.<br />
+          තෙරුවන්   සරනය්<br />
+          🙏🏿🙏🏿
+        </p>
+      </div>
+  
+      <!-- ENTRY 5 — 25 May 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 25 May 2026</div>
+        <p>
+          Dear Parents,<br /><br />
+          Today the final rites of the teacher of our Hon. Sewanagala
+          line-height: 2;
+        }
+      }
+    </style>
+  </head>
 
-</body>
-</html>
+  <body>
+
+  <header>
+    <div class="header-left">
+      <img src="logo.jpeg" class="logo" alt="School Logo">
+      <h1>Learning Diary</h1>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="form.html">Forms / Library</a>
+      <a href="learning-diary.html">Learning Diary</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h2>📖 Learning Diary</h2>
+    <p>
+      A special place to record what our students learned and experienced each week.
+    </p>
+  </div>
+
+  <div class="diary-wrapper">
+    <div class="book-page">
+
+      <!-- BOOK IMAGE -->
+      <img
+        src="images/open-book.jpg"
+        alt="Open book"
+        class="book-image"
+      >
+
+      <!-- ENTRY 1 — 19 July 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 19 July 2026</div>
+        <p>
+          Today we successfully conducted our usual 2 classes.<br />
+          Junior class<br />
+          And grade 4 and above class<br />
+          For junior class they learned the story of &ldquo;sopaka&rdquo; and how lord buddha helped him.<br />
+          For the grade 4 and above class they continued learning pali stanzas used to worship the sacred bodhi tree. It was encouraging to see how kids were able to memorise the stanzas.<br />
+          We welcomed today our 2 new students<br />
+          Enuki and<br />
+          Miheli<br />
+          I believe they should have enjoyed their time today with our other kids.<br />
+          At the break kids enjoyed their snacks, candy and chocolates.<br />
+          After the break our rev Nandarathana thero taught the lesson 10 which explained traditions we need to follow when we go to temple.<br />
+          As always please provide your feedback good or bad.<br />
+          May triple gems bless you all !<br />
+          🙏🏿🙏🏿
+        </p>
+      </div>
+
+      <!-- ENTRY 2 — 21 June 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 21 June 2026</div>
+        <p>
+          Today we successfully wrapped up the semester conducting junior class and grade 4 and above class.
+          Junior class learned about merits of unity and were given the kids an exercise where they could
+          write their own ideas and kids enjoyed it.
+          Grade 4 and above class was very interesting. They learned about the bodhi tree and the pali stanzas
+          used to worship the bodi tree. Within the class kids were asked to memorise below 2 stanzas.<br />
+          1. යස්ස  මූලේ  නිසින්නෝව<br />
+          2. ඉමේ ඒතේ මහා බෝදී<br />
+          It was amazing to see almost all the kids memorised at least one stanza in the session.
+          Then happened the very interesting part of the day. The third stanza was below.<br />
+          ඉන්ද  නීල  වන්න  පත්ත<br />
+          I told kids it&rsquo;s a tough one to memorise and if anyone memorise it before 4pm i will
+          give 20$. Kids were very enthusiastic and everyone accepted the challenge.<br />
+          Then Jenaru came to me and said it&rsquo;s a bad practice to promise money asking kids to study.
+          I was speechless. I told him you&rsquo;re correct! This incident is open for discussion;
+          what do you all think? I thought to myself next time i would prmoise a gift, not money ☺️ <br />
+          Then at 4 o&rsquo;clock nobody was able to memorise it. But Nem and Senitha were very close;
+          they told the stanza with just 2 words missing. 🫡<br />
+          After that we finished the class as usual with Sunday school song and meditation.<br />
+          This wrap up the semester. We distributed chocolates as usual and some biscuits
+          from yesterday&rsquo;s event. Merits to all who provided that.<br />
+          We will let you know when we are resuming classes. Hope you all will have a wonderful school holidays.<br />
+          May triple gems bless you all!<br />
+          🙏🏿🙏🏿🙏🏿<br />
+          Please practice with kids these 2 stanzas in the school holidays.
+        </p>
+      </div>
+
+      <!-- ENTRY 3 — 7 June 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 7 June 2026</div>
+        <p>
+          We successfully conducted 2 classes today; junior class and grade 3 and above class. Our Rev. Nandarathana and I taught the both classes one period each. Before I forget I collected flower baskets kids forgot to take homr and I can give them on 21st
+  June, when we meet in Dhamma school.<br />
+          It was really encouraging to see amidst long weekend kids came to dharma school.<br />
+          For the grade 3 and above class pupils answered the exercise questions on lesson Upatissa and Kolitha. All the kids were keen to go through the lesson and find the answers and the discussions with Rachel was interesting. Senitha who raise nice logical
+  questions remembered the name of Assaji thero (one of the answers for an exercise question) which made me very proud of the progress of our students. Then Seth requested to tell the story of Angulimala and we went through that story. Aura already knew the story
+  and clearly explained how Lord Buddha controlled Angulimala. Thereafter we completed the Vesak week&rsquo;s discussion about the story of Prince Siddhartha until he enlighten on Vesak poya day and touch based on Sath Sathiya.<br />
+          For the junior class Nandarathana thero taught the Queen Maha maya&rsquo;s dream.<br />
+          Then we had the recess. Kids enjoyed the snacks they brought from home and chocolates which was distributed. During the recess a small incident was reported between boys and it was settled after talking to every party involved. During the recess we
+  allow kids to play in the backyard, but it was brought to our notice that some boys are climbing on top of a block of plastic barricade which is dangerous and we&rsquo;ll discuss internally and we unfortunately may need to stop kids playing outside. And also to
+  reduce the recess time from 15 minutes to 5 minutes. Please let us know your thoughts on this.<br />
+          After the break the junior class learned 2 more precious stories. One story about Nandiya the leader of Deers who talked to the king and liberated all the animals / creatures from being hunted for fun and food. The other story was the famous &ldquo;Sama
+  Jathakaya&rdquo;; hope you all can remember that.<br />
+          Our Rev. after the break tried his best to teach the kids tactics how to control emotions such as anger, bullying, being bullied, annoyance etc. He asked our senior students to hold on to a heavy object in outstretched hand and keep holding it until
+  they couldn&rsquo;t do it any more as the hand was aching. So he went ahead to describe how a small annoyance feeling if kept in your head longer, how it will eventually stress your mind and body; best to get rid of that feeling asap. Then he taught the kids if
+  somebody is talking rough words hear it from one ear and let it go out from the other ear.<br />
+          After the Dhamma school song and meditation kids went home on their merry ways.<br />
+          Next week there&rsquo;s NO Sunday school. Please drop your kids to the drama excursion in Cranbourne. Details will be shared soon. Drama is starting at 3pm.<br />
+          Any questions, comments, suggestions feel free to discuss here or anonymously send a message through Sunday school web site (Contact Us page).<br />
+          May triple gems blessings be with you!!<br />
+          🙏🏿🙏🏿🙏🏿
+        </p>
+      </div>
+
+      <!-- ENTRY 4 — 31 May 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 31 May 2026</div>
+        <p>
+          Today we successfully conducted the Sunday school and our junior school teacher was running some errands and was absent. She has informed that she won&rsquo;t be able to come next week too.<br />
+          Therefore we had 2 classes and Janaki akka managed the junior class. We had full house today 18 kids present and it&rsquo;s a pleasure sight as teachers to see kids enthusiastically attending our classes. We missed Evan, Raynon, Riley and Shanon and
+  hope they&rsquo;ll join next week.<br />
+          Today junior school learnt සුව  ජාතකය. Where a young parrot fed his blind parents one day found delicious mangoes from a far away island.<br />
+          Daddy parrot recognised the mangoes were from that island and warned the son not to go there as it was dangerous. But son didn&rsquo;t listen and to serve his craving went there again and a strong cyclone threw him to the sea and perished. The story
+  emphasised the value of listening to parents/ elders.<br />
+          The year 3 and above class learned about vesak festival and the story how බෝදිසත්ව   in the heaven born as a human being named prince සිද්දාර්ත    with utmost courage attaining buddhahood finally discovering the 4 noble truths and help many to enlighten.<br 
+  />
+          There was a funny moment when it was discovered how prince siddhartha left the castle whilst රාහුල  had been born and when it was asked how sad princess යශෝදරා should have felt, seth said if i faced the situation i would have selected another partner
+  happily. This made the whole class laugh.<br />
+          We also made it a point to pay gratitude for the kids and parents who cleaned the temple yesterday in the vesak day which was a great wholesome deed.<br />
+          The website will be updated tonight. If you have any ideas please let us know. Any comments good or bad are welcome. In the web site contact us page you can provide anonymous comments.<br />
+          Please make sure your vesak decorations are fully lighted tonight too 😊<br />
+          Have a great week ahead!<br />
+          තෙරුවන්   සරනය්<br />
+          🙏🏿🙏🏿
+        </p>
+      </div>
+
+      <!-- ENTRY 5 — 25 May 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 25 May 2026</div>
+        <p>
+          Dear Parents,<br /><br />
+          Today the final rites of the teacher of our Hon. Sewanagala
+          Nandarathana Thero, Most Ven. Agalabada Piyasiri Thero,
+          will take place in Sri Lanka around 3pm Sri Lankan time.
+          We from the Sunday School wish the Honourable Thero
+          the supreme bliss of Nibbana. 🙏🏿🙏🏿🙏🏿
+          <br /><br />
+          Today was a busy day for Janaki Akka and our Nandarathana Thero.
+          While Janaki Akka attended the state delegates conference,
+          Nandarathana Thero led the ශ්‍රමදානය organised by
+          Maliyadeva OBA at our English Dhamma Temple in Gembrook.
+          <br /><br />
+          Thanks to our junior school teacher, the Sunday School
+          activities continued successfully without interruption.
+          <br /><br />
+          We warmly welcomed a new student who joined today and she
+          will study with the junior school pupils.
+          <br /><br />
+          Today we conducted two classes:
+          the Junior Class and the Year 3 and Above Class.
+          <br /><br />
+          Students actively participated in the discussions and
+          enjoyed the learning activities throughout the session.
+          <br /><br />
+          The children also enjoyed snacks and tea during the recess
+          break and spent quality time together.
+          <br /><br />
+          We thank all parents for their valuable communication and support.
+          <br /><br />
+          Any comments or feedback are warmly welcome. 🙏🏿
+          <br /><br />
+          තෙරුවන්   සරණයි
+        </p>
+      </div>
+
+      <!-- ENTRY 6 — 17 May 2026 -->
+      <div class="entry">
+        <h3>Lesson Reflection</h3>
+        <div class="entry-date">Date: 17 May 2026</div>
+        <p>
+          Today we conducted the Kids Sil Program.
+          <br /><br />
+          Students learned about:
+          Mattakundalee Jathakaya,
+          Vishaka Mahanuwara Thun Biya,
+          and the importance of observing Sil.
+          <br /><br />
+          The students participated enthusiastically and enjoyed
+          the spiritual activities throughout the day.
+        </p>
+      </div>
+
+      <!-- ADD NEW ENTRIES BELOW -->
+
+    </div>
+  </div>
+
+  <footer>
+    © 2026 English Dhamma Sunday School
+  </footer>
+
+  </body>
+  </html>
+
