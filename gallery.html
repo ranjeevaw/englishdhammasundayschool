@@ -1,0 +1,257 @@
+<!-- ========================= -->
+<!-- FILE: gallery.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .event-section {
+      margin-bottom: 50px;
+    }
+
+    .event-section h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .login-box {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      background: #fff;
+      text-align: center;
+    }
+
+    .login-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-box button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #galleryContent {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+
+  <div class="header-top">
+    <img src="logo.jpeg" alt="Logo" class="logo">
+    <h1>Gallery</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="form.html">Forms / Library</a>
+    <a href="learning-diary.html">Learning Diary</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+</header>
+
+<!-- LOGIN BOX -->
+
+<div class="login-box" id="loginBox">
+  <h2>Gallery Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="checkLogin()">Login</button>
+
+  <div class="error" id="errorMsg"></div>
+</div>
+
+<!-- GALLERY CONTENT -->
+
+<div class="container" id="galleryContent">
+
+  <h2>Event Photo Gallery</h2>
+
+    <!-- EVENT 1 -->
+
+  <div class="event-section">
+    <h3>Vesak Poya Day ශ්‍රමදානාය Cleaning Day of English Dhamma Temple  - 30 May 2026</h3>
+
+    <div class="gallery">
+      <img src="images/r1.jpg" alt="">
+      <img src="images/r2.jpg" alt="">
+      <img src="images/r3.jpg" alt="">
+      <img src="images/r4.jpg" alt="">
+      <img src="images/r5.jpg" alt="">
+      
+    </div>
+  </div>
+  
+  <!-- EVENT 1 -->
+
+  <div class="event-section">
+    <h3>Making Vesak Lanterns - May 2026</h3>
+
+    <div class="gallery">
+      <img src="images/v1.jpg" alt="">
+      <img src="images/v2.jpg" alt="">
+      <img src="images/v3.jpg" alt="">
+      <img src="images/v4.jpg" alt="">
+      <img src="images/v5.jpg" alt="">
+      <img src="images/v6.jpg" alt="">
+      <img src="images/v7.jpg" alt="">
+      <img src="images/v8.jpg" alt="">
+      <img src="images/v9.jpg" alt="">
+      <img src="images/v10.jpg" alt="">
+      <img src="images/v11.jpg" alt="">
+      <img src="images/v12.jpg" alt="">
+      <img src="images/v13.jpg" alt="">
+      <img src="images/v14.jpg" alt="">
+      <img src="images/v15.jpg" alt="">
+      <img src="images/v16.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- EVENT 2 -->
+
+  <div class="event-section">
+    <h3>Sil Program - May 2026</h3>
+
+    <div class="gallery">
+      <img src="images/s1.jpg" alt="">
+      <img src="images/s2.jpg" alt="">
+      <img src="images/s3.jpg" alt="">
+      <img src="images/s4.jpg" alt="">
+      <img src="images/s5.jpg" alt="">
+      <img src="images/s6.jpg" alt="">
+      <img src="images/s7.jpg" alt="">
+      <img src="images/s8.jpg" alt="">
+      <img src="images/s9.jpg" alt="">
+      <img src="images/s10.jpg" alt="">
+    </div>
+  </div>
+
+    <div class="event-section">
+    <h3>Parliament Tour - April 2026</h3>
+
+    <div class="gallery">
+      <img src="images/p1.jpg" alt="">
+      <img src="images/p2.jpg" alt="">
+      <img src="images/p3.jpg" alt="">
+      <img src="images/p4.jpg" alt="">
+      <img src="images/p5.jpg" alt="">
+      <img src="images/p6.jpg" alt="">
+      <img src="images/p7.jpg" alt="">
+      <img src="images/p8.jpg" alt="">
+      <img src="images/p9.jpg" alt="">
+      <img src="images/p10.jpg" alt="">
+      <img src="images/p11.jpg" alt="">
+      <img src="images/p12.jpg" alt="">
+      <img src="images/p13.jpg" alt="">
+      <img src="images/p14.jpg" alt="">
+      <img src="images/p15.jpg" alt="">
+      <img src="images/p16.jpg" alt="">
+      <img src="images/p17.jpg" alt="">
+      
+    </div>
+  </div>
+
+  <!-- EVENT 3 -->
+
+  <div class="event-section">
+    <h3>Stage Drama - June 2026</h3>
+
+    <div class="gallery">
+      <!--img src="images/annual1.jpg" alt="">
+      <img src="images/annual2.jpg" alt="">
+      <img src="images/annual3.jpg" alt=""-->
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 My Website
+</footer>
+
+<script>
+  function checkLogin() {
+
+    // HARD CODED LOGIN
+    const correctUsername = "englishdhamma";
+    const correctPassword = "kjewg834u5jqr";
+
+    const enteredUsername = document.getElementById("username").value;
+    const enteredPassword = document.getElementById("password").value;
+
+    if (
+      enteredUsername === correctUsername &&
+      enteredPassword === correctPassword
+    ) {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("galleryContent").style.display = "block";
+    } else {
+      document.getElementById("errorMsg").innerHTML =
+        "Invalid username or password";
+    }
+  }
+</script>
+
+</body>
+</html>
