@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register";
 import Success from "./pages/Success";
 import StudentReport from "./pages/StudentReport";
@@ -7,7 +7,7 @@ import EditStudent from "./pages/EditStudent";
 
 function App() {
   return (
-    <BrowserRouter basename="/englishdhammasundayschool/sunday-school-registration">
+<HashRouter>
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/success" element={<Success />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/students/:id" element={<EditStudent />} />
       </Routes>
-    </BrowserRouter>
+</HashRouter>
   );
 }
 
