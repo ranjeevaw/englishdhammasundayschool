@@ -7,19 +7,13 @@ import EditStudent from "./pages/EditStudent";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/englishdhammasundayschool/sunday-school-registration">
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/success" element={<Success />} />
- 	<Route path="/students" element={<StudentReport />} />
- 	<Route
-    path="/admin"
-    element={<AdminLogin />}
-/>
-<Route
-    path="/students/:id"
-    element={<EditStudent />}
-/>
+        <Route path="/students" element={<StudentReport />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/students/:id" element={<EditStudent />} />
       </Routes>
     </BrowserRouter>
   );
